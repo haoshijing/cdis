@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanc.chids.dao.MemberDAO">
+    <sql id="all_columns">
+        *
+    </sql>
+    <sql id = "tableName">
+        member
+    </sql>
+    <select id="getById" resultType="MemberPo" parameterType="java.lang.Integer">
+        <!-- 具体的sql -->
+        SELECT <include refid="all_columns"/> FROM
+        <include refid="tableName"/>
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectList" parameterType="MemberPo" resultType="MemberPo">
+        SELECT
+        <include refid="all_columns"/> FROM <include refid="tableName"/>
+        <where>
+            <if test="queryMember.idCardNo != null">
+                AND idCardNo = #{queryMember.idCardNo}
+            </if>
+        </where>
+
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from member where id = #{id}
+    </delete>
+
+    <insert id="batchInsert"  parameterType="java.util.List">
+     INSERT INTO member(
+        id,
+        sex,
+        name,
+        birthDay,
+        enterDate,
+        graduatedDate,
+        studyStyle,
+        graduateMajor  ,
+        graduateSchool ,
+        level ,
+        collegeLocation ,
+        cardNo,
+        checkCode,
+        createDate,
+        checkCodeEndDate ,
+        idCardNo,
+        studyType
+        )
+        values
+        <foreach collection="list" item="member" index="index" separator="," >
+            (
+            #{member.id},
+            #{member.sex} ,
+            #{member.name} ,
+            #{member.birthDay}  ,
+            #{member.enterDate} ,
+            #{member.graduatedDate} ,
+            #{member.studyStyle} ,
+            #{member.graduateMajor}  ,
+            #{member.graduateSchool} ,
+            #{member.level} ,
+            #{member.collegeLocation} ,
+            #{member.cardNo} ,
+            #{member.checkCode},
+            #{member.createDate},
+            #{member.checkCodeEndDate} ,
+            #{member.idCardNo},
+            #{member.studyType}
+            )
+        </foreach>
+    </insert>
+    <insert id="insertMember" parameterType="MemberPo">
+        INSERT INTO member(
+        id,
+        sex,
+        name,
+        birthDay,
+        enterDate,
+        graduatedDate,
+        studyStyle,
+        graduateMajor  ,
+        graduateSchool ,
+        level ,
+        collegeLocation ,
+        cardNo,
+        checkCode,
+        createDate,
+        checkCodeEndDate ,
+        idCardNo,
+        studyType
+        ) select
+        #{member.id},
+        #{member.sex} ,
+        #{member.name} ,
+        #{member.birthDay}  ,
+        #{member.enterDate} ,
+        #{member.graduatedDate} ,
+        #{member.studyStyle} ,
+        #{member.graduateMajor}  ,
+        #{member.graduateSchool} ,
+        #{member.level} ,
+        #{member.collegeLocation} ,
+        #{member.cardNo} ,
+        #{member.checkCode},
+        #{member.createDate},
+        #{member.checkCodeEndDate} ,
+        #{member.idCardNo},
+        #{member.studyType}
+    </insert>
+
+
+</mapper>
