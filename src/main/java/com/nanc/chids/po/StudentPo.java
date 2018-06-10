@@ -1,10 +1,9 @@
 package com.nanc.chids.po;
 
-
 import lombok.Data;
 
 @Data
-public class MemberPo {
+public class StudentPo {
     private Integer id;
     /**
      * 姓名
@@ -14,6 +13,7 @@ public class MemberPo {
      * 性别
      */
     private String sex;
+    private String nation;
     /*
     出生日期
      */
@@ -79,7 +79,4 @@ public class MemberPo {
      * 学历类型
      */
     private String studyType;
-
-    private String nation;
-
 }

@@ -22,6 +22,14 @@ public class FrontController {
         return modelAndView;
     }
 
+    @RequestMapping("/indexnew/{id}")
+    public ModelAndView indexnew(@PathVariable Integer id){
+        ModelAndView modelAndView = new ModelAndView("indexnew");
+        MemberPo memberPo = memberDAO.getById(id);
+        modelAndView.addObject("memberPo",memberPo);
+        return modelAndView;
+    }
+
     @RequestMapping("/view/{id}")
     public ModelAndView wap(@PathVariable Integer id){
         ModelAndView modelAndView = new ModelAndView("wap");
