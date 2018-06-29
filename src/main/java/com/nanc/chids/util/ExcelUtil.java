@@ -53,7 +53,7 @@ public final class ExcelUtil {
     public static void main(String[] args) throws Exception{
         List<MemberPo> list = parseExcel(new FileInputStream("d:/data.xls"));
         for(MemberPo memberPo:list){
-            NameImgCreateHelper.create(memberPo.getName(),memberPo.getIdCardNo());
+            //NameImgCreateHelper.create(memberPo.getName(),memberPo.getIdCardNo());
         }
     }
 
