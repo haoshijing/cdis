@@ -37,9 +37,14 @@ public final class ExcelUtil {
                     memberPo.setCollegeLocation(cells[11].getContents());
                     memberPo.setCardNo(cells[12].getContents());
                     memberPo.setCheckCode(cells[13].getContents());
-                    memberPo.setCreateDate(cells[14].getContents());
-                    memberPo.setCheckCodeEndDate(cells[15].getContents());
+                    memberPo.setPresident(cells[14].getContents());
+                    memberPo.setUpdateDate(cells[15].getContents());
+                    memberPo.setSelfMajor(cells[16].getContents());
                     memberPo.setIdCardNo(cells[17].getContents());
+                    memberPo.setCardNo2(cells[18].getContents());
+                    memberPo.setLength(cells[19].getContents());
+                    memberPo.setQRCode(cells[20].getContents());
+                    memberPo.setPhoto(cells[21].getContents());
                     list.add(memberPo);
                 }
 

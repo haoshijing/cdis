@@ -97,7 +97,7 @@
 
                 <!--<div class='pw-info-pc'><a href="/xlcx/bg.do?vcode=927730493272&amp;ln=cn&amp;lang=cn&goto=pc">电脑版</a></div> -->
                 <div class="col s3 ">
-                    <img src="http://www.chsi.com.cn/images/wap/search_pdf.png"  alt="下载PDF" title="下载PDF" onClick="window.location.href=''" class='responsive-img waves-effect waves-teal right z-depth-1 down_psf' />
+                    <img src="http://www.chsi.com.cn/images/wap/search_pdf.png"  alt="下载PDF" title="下载PDF" onClick="window.location.href='http://www.chdsi.com.cn/xlgb/${memberPo.id}.jpg'" class='responsive-img waves-effect waves-teal right z-depth-1 down_psf' />
                 </div>
 
 
@@ -117,35 +117,36 @@
         <div class="collection card">
 
             <#if memberPo.studyType ?? && memberPo.studyType != '自考'>
-            <div class="row collection-item"><div class="col s4 bolder">入学时间：</div><div class="col s8">${memberPo.enterDate!''}</div></div>
+                <div class="row collection-item"><div class="col s4 bolder">入学时间：</div><div class="col s8">${memberPo.enterDate!''}</div></div>
 
-            <#else>
-                <div class="row collection-item">
-                    <div class="col s4 bolder">身份证号：</div>
-                    <div class="col s8">${memberPo.idCardNo!''}</div>
-                </div>
+                <#else>
+                    <div class="row collection-item">
+                        <div class="col s4 bolder">身份证号：</div>
+                        <div class="col s8">${memberPo.idCardNo!''}</div>
+                    </div>
             </#if>
 
             <div class="row collection-item"><div class="col s4 bolder">毕业时间：</div><div class="col s8">${memberPo.graduatedDate!''}</div></div>
-            <div class="row collection-item"><div class="col s4 bolder">学历类型：</div><div class="col s8">
-                <#if memberPo.studyType ?? && memberPo.studyType != '自考'>${memberPo.studyType!''}<#else>${memberPo.studyStyle!''}</#if></div></div>
-            <div class="row collection-item"><div class="col s4 bolder">学历层次：</div><div class="col s8">${memberPo.level!''}</div></div>
             <div class="row collection-item"><div class="col s4 bolder">毕业院校：</div><div class="col s8">${memberPo.graduateSchool!''}</div></div>
             <#if memberPo.studyType ?? && memberPo.studyType != '自考'>
                 <div class="row collection-item"><div class="col s4 bolder">院校所在地：</div><div class="col s8">${memberPo.collegeLocation!''}</div></div>
             </#if>
             <div class="row collection-item"><div class="col s4 bolder">专业名称：</div><div class="col s8">${memberPo.graduateMajor!''}</div></div>
+            <div class="row collection-item"><div class="col s4 bolder">学历类型：</div><div class="col s8">
+                <#if memberPo.studyType ?? && memberPo.studyType != '自考'>${memberPo.studyType!''}<#else>${memberPo.studyStyle!''}</#if></div></div>
+            <div class="row collection-item"><div class="col s4 bolder">学制：</div><div class="col s8">${memberPo.length!''}</div></div>
             <#if memberPo.studyType ?? && memberPo.studyType != '自考'>
                 <div class="row collection-item"><div class="col s4 bolder">学习形式：</div><div class="col s8">${memberPo.studyStyle!''}</div></div>
             </#if>
+            <div class="row collection-item"><div class="col s4 bolder">学历层次：</div><div class="col s8">${memberPo.level!''}</div></div>
             <div class="row collection-item"><div class="col s4 bolder">证书编号：</div><div class="col s8">${memberPo.cardNo!''}</div></div>
-            <div class="row collection-item"><div class="col s4 bolder">毕结业结论：</div><div class="col s8">毕业</div></div>
+            <div class="row collection-item"><div class="col s4 bolder">毕(结)业</div><div class="col s8">毕业</div></div>
+            <div class="row collection-item"><div class="col s4 bolder">院(校)长姓名：</div><div class="col s8">${memberPo.president!''}</div></div>
         </div>
 
         <div class="collection card">
             <div class="row collection-item"><div class="col s4 bolder">在线验证码：</div><div class="col s8">${memberPo.checkCode !''}</div></div>
-            <div class="row collection-item"><div class="col s4 bolder">制表日期：</div><div class="col s8">${memberPo.createDate !''}</div></div>
-            <div class="row collection-item"><div class="col s4 bolder">验证期至：</div><div class="col s8">${memberPo.checkCodeEndDate !''}</div></div>
+            <div class="row collection-item"><div class="col s4 bolder">更新日期：</div><div class="col s8">${memberPo.updateDate !''}</div></div>
         </div>
 
         <div class="container">
