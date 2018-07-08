@@ -51,7 +51,7 @@ public class BaseTest {
         memberPo.setCardNo("36042519880801493X");
         memberPo.setCheckCode("22222222");
         memberPo.setStudyStyle("全日制");
-        memberPo.setCheckCodeEndDate("2017-10-25");
+//        memberPo.setCheckCodeEndDate("2017-10-25");
         memberPo.setEnterDate("2017-10-25");
         memberPo.setGraduateMajor("1111");
         memberPo.setGraduateSchool("华东交通大学");
@@ -59,8 +59,8 @@ public class BaseTest {
         memberPo.setCollegeLocation("江西省");
         memberPo.setCheckCode("3333");
         memberPo.setCardNo("5454545412127");
-        memberPo.setCreateDate("2017-10-14");
-        memberPo.setCheckCodeEndDate("2017-10-15");
+//        memberPo.setCreateDate("2017-10-14");
+//        memberPo.setCheckCodeEndDate("2017-10-15");
         memberPo.setIdCardNo("36042519880801493X");
         int insertSet = memberDAO.insertMember(memberPo);
         stopWatch.stop();
@@ -86,7 +86,7 @@ public class BaseTest {
                 memberPo.setCardNo("36042519880801493X");
                 memberPo.setCheckCode("22222222");
                 memberPo.setStudyStyle("全日制");
-                memberPo.setCheckCodeEndDate("2017-10-25");
+//                memberPo.setCheckCodeEndDate("2017-10-25");
                 memberPo.setEnterDate("2017-10-25");
                 memberPo.setGraduateMajor("1111");
                 memberPo.setGraduateSchool("华东交通大学");
@@ -94,8 +94,8 @@ public class BaseTest {
                 memberPo.setCollegeLocation("江西省");
                 memberPo.setCheckCode("3333");
                 memberPo.setCardNo("5454545412127");
-                memberPo.setCreateDate("2017-10-14");
-                memberPo.setCheckCodeEndDate("2017-10-15");
+//                memberPo.setCreateDate("2017-10-14");
+//                memberPo.setCheckCodeEndDate("2017-10-15");
                 memberPo.setIdCardNo("36042519880801493X");
                 memberPos.add(memberPo);
             }

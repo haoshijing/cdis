@@ -284,8 +284,7 @@
                             <tr>
                                 <th>姓　　名</th>
                                 <td colspan="3">
-                                    <img src="http://www.chdsi.com.cn/name/${memberPo.idCardNo}.jpg" width="402" height="43" />
-
+                                    <span style="width:134px;">${memberPo.name!''}</span>
                                 </td>
                                 <td rowspan="4">
                                     <div class="cn_photo1" id="xueli_photo_div">
@@ -327,7 +326,7 @@
                                 <th><div style="width:90px;">毕业院校</div></th>
                                 <td><span style="width:296px;">${memberPo.graduateSchool !''}</span></td>
                                 <th><div style="width:100px;">院校所在地</div></th>
-                                <td><span style="width:128">${memberPo.collegeLocation !''}</span></td>
+                                <td><span style="width:128px">${memberPo.collegeLocation !''}</span></td>
                             </tr>
                             <#if memberPo.studyType ?? && memberPo.studyType != '自考'>
                             <tr>
@@ -357,12 +356,13 @@
                                 <td class="cn_font2"><span>${memberPo.checkCode!''}</span></td>
                             </tr>
                             <tr>
-                                <th class="cn_font1">制表日期</th>
-                                <td><span>${memberPo.createDate}</span></td>
+                                <th class="cn_font1">更新日期</th>
+                                <td><span>${memberPo.updateDate}</span></td>
                             </tr>
+
                             <tr>
-                                <th class="cn_font1">验证期至</th>
-                                <td><span>${memberPo.checkCodeEndDate}</span></td>
+                                <th class="cn_font1">院(校)长姓名</th>
+                                <td><span>${memberPo.president!''}</span></td>
                             </tr>
                             <tr>
                                 <td colspan="4">

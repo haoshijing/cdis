@@ -5,6 +5,10 @@ import lombok.Data;
 
 @Data
 public class MemberPo {
+
+    /**
+     * 序号
+     */
     private Integer id;
     /**
      * 姓名
@@ -14,8 +18,8 @@ public class MemberPo {
      * 性别
      */
     private String sex;
-    /*
-    出生日期
+    /**
+     * 出生日期
      */
     private String birthDay;
     /**
@@ -41,6 +45,10 @@ public class MemberPo {
     private String graduateSchool;
 
     /**
+     * 学历类型
+     */
+    private String studyType;
+    /**
      * 学历层次
      */
     private String level;
@@ -50,25 +58,30 @@ public class MemberPo {
      */
     private String collegeLocation;
 
-    /*
-    证书编号
+    /**
+     * 证书编号
      */
     private String cardNo;
 
-    /*
-    验证码
+    /**
+     * 验证码
      */
     private String checkCode;
 
     /**
-     * 制表日期
+     * 校长姓名
      */
-    private String createDate;
+    private String president;
 
     /**
-     * 验证期至
+     * 更新日期
      */
-    private String checkCodeEndDate;
+    private String updateDate;
+
+    /**
+     * 自考专业
+     */
+    private String selfMajor;
 
     /**
      * 身份证号
@@ -76,10 +89,23 @@ public class MemberPo {
     private String idCardNo;
 
     /**
-     * 学历类型
+     * byzh
      */
-    private String studyType;
+    private String cardNo2;
 
-    private String nation;
+    /**
+     * 学制
+     */
+    private String length;
+
+    /**
+     * 二维码
+     */
+    private String qRCode;
+
+    /**
+     * xlbg
+     */
+    private String photo;
 
 }

@@ -1,21 +1,26 @@
 drop  table member;
-create table member
-(
-id int primary key auto_increment comment '学号',
-name varchar(100) CHARACTER SET utf8 comment '姓名' ,
-sex varchar(5) CHARACTER SET utf8 comment '性别' ,
-birthDay  varchar(100) CHARACTER SET utf8 ,
-enterDate varchar(100) CHARACTER SET utf8 ,
-graduatedDate varchar(100) CHARACTER SET utf8 ,
-studyStyle varchar(100) CHARACTER SET utf8,
-graduateMajor varchar(100) CHARACTER SET utf8 ,
-graduateSchool varchar(100)  CHARACTER SET utf8,
-level varchar(100) CHARACTER SET utf8,
-collegeLocation varchar(100) CHARACTER SET utf8,
-cardNo varchar(100) CHARACTER SET utf8 ,
-checkCode varchar(100) CHARACTER SET utf8,
-createDate varchar(100) ,
-checkCodeEndDate varchar(100) CHARACTER SET utf8,
-idCardNo varchar(100) CHARACTER SET utf8,
-studyType varchar(100) CHARACTER SET utf8
-) comment '信息表';
+CREATE TABLE `member` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '序号',
+  `name` varchar(100) DEFAULT NULL COMMENT '姓名',
+  `sex` varchar(5) DEFAULT NULL COMMENT '性别',
+  `birthDay` varchar(100) DEFAULT NULL,
+  `enterDate` varchar(100) DEFAULT NULL,
+  `graduatedDate` varchar(100) DEFAULT NULL,
+  `studyStyle` varchar(100) DEFAULT NULL,
+  `graduateMajor` varchar(100) DEFAULT NULL,
+  `graduateSchool` varchar(100) DEFAULT NULL,
+  `level` varchar(100) DEFAULT NULL,
+  `collegeLocation` varchar(100) DEFAULT NULL,
+  `cardNo` varchar(100) DEFAULT NULL,
+  `checkCode` varchar(100) DEFAULT NULL,
+  `president` varchar(100) DEFAULT NULL,
+  `updateDate` varchar(100) DEFAULT NULL,
+  `selfMajor` varchar(100) DEFAULT NULL,
+  `idCardNo` varchar(100) DEFAULT NULL,
+  `studyType` varchar(100) DEFAULT NULL,
+  `cardNo2` varchar(100) DEFAULT NULL,
+  `length` varchar(100) DEFAULT NULL,
+  `qRCode` varchar(100) DEFAULT NULL,
+  `photo` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COMMENT='信息表';
